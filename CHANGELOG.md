@@ -3,6 +3,11 @@
 #### Features
 
 #### Fixes
+## 3.0.1 (September 07, 2020)
+
+#### Fixes
+
+* Rename `data/os/Windows.yaml` to `data/os/windows.yaml`
 
 ## 3.0.0 (September 07, 2020)
 
