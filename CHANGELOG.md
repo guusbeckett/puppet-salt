@@ -4,6 +4,13 @@
 
 #### Fixes
 
+## 3.0.12 (September 07, 2020)
+
+#### Fixes
+
+* Add correct config folder to data/os/windows.yaml
+
+
 ## 3.0.11 (September 07, 2020)
 
 #### Fixes

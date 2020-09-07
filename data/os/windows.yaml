@@ -1,9 +1,9 @@
-salt::minion::config_dir: 'c:/salt'
+salt::minion::config_dir: 'c:/salt/conf'
 
-salt::master::config_dir: 'c:/salt'
+salt::master::config_dir: 'c:/salt/conf'
 
-salt::api::config_dir: 'c:/salt'
+salt::api::config_dir: 'c:/salt/conf'
 
-salt::syndic::config_dir: 'c:/salt'
+salt::syndic::config_dir: 'c:/salt/conf'
 
-salt::pepper::config_dir: 'c:/salt'
+salt::pepper::config_dir: 'c:/salt/conf'
