@@ -4,6 +4,13 @@
 
 #### Fixes
 
+## 3.0.10 (September 07, 2020)
+
+#### Fixes
+
+* Fix not using specified version in `salt::minion::install`
+
+
 ## 3.0.9 (September 07, 2020)
 
 #### Fixes
