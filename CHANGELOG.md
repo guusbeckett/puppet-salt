@@ -4,6 +4,12 @@
 
 #### Fixes
 
+## 3.0.6 (September 07, 2020)
+
+#### Fixes
+
+* Change backwards slashes to forward slashes in data/os/windows.yaml
+
 ## 3.0.5 (September 07, 2020)
 
 #### Fixes
