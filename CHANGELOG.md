@@ -4,6 +4,13 @@
 
 #### Fixes
 
+## 3.0.8 (September 07, 2020)
+
+#### Fixes
+
+* Removed double reference to target in repo.pp
+
+
 ## 3.0.7 (September 07, 2020)
 
 #### Fixes

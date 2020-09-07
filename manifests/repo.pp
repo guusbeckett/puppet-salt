@@ -72,7 +72,6 @@ define salt::repo (
       }
 
       file { "C:/temp/Salt-Minion-${salt_release}-Py3-${facts['os']['architecture']}-Setup.exe":
-        ensure  => "C:/temp/Salt-Minion-${salt_release}-Py3-${facts['os']['architecture']}-Setup.exe",
         source  => $_url,
         replace => 'no'
       }
