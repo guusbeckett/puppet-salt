@@ -4,6 +4,13 @@
 
 #### Fixes
 
+## 3.0.11 (September 07, 2020)
+
+#### Fixes
+
+* Fix not forcing AMD64 during Windows minion install
+
+
 ## 3.0.10 (September 07, 2020)
 
 #### Fixes

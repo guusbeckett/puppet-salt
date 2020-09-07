@@ -15,7 +15,7 @@ class salt::minion::install {
 
       package { $salt::minion::package_name:
         ensure          => $salt::minion::package_ensure,
-        source          => "C:/temp/Salt-Minion-${salt_release_name}-Py3-${facts['os']['architecture']}-Setup.exe",
+        source          => "C:/temp/Salt-Minion-${salt_release_name}-Py3-AMD64-Setup.exe",
         install_options => ['/S'],
       }
     }
