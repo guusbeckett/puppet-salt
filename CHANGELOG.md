@@ -4,6 +4,12 @@
 
 #### Fixes
 
+## 3.0.7 (September 07, 2020)
+
+#### Fixes
+
+* Fix not referencing full file path in repo.pp
+
 ## 3.0.6 (September 07, 2020)
 
 #### Fixes

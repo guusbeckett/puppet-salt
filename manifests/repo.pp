@@ -71,7 +71,7 @@ define salt::repo (
         $_url = "${base_repo_url}/windows/Salt-Minion-${salt_release}-Py3-${facts['os']['architecture']}-Setup.exe"
       }
 
-      file { "Salt-Minion-${salt_release}-Py3-${facts['os']['architecture']}-Setup.exe":
+      file { "C:/temp/Salt-Minion-${salt_release}-Py3-${facts['os']['architecture']}-Setup.exe":
         ensure  => "C:/temp/Salt-Minion-${salt_release}-Py3-${facts['os']['architecture']}-Setup.exe",
         source  => $_url,
         replace => 'no'
