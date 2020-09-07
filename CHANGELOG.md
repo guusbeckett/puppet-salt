@@ -4,7 +4,7 @@
 
 #### Fixes
 
-## 3.0.2 (September 07, 2020)
+## 3.0.2/3.0.3 (September 07, 2020)
 
 #### Fixes
 

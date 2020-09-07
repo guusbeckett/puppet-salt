@@ -17,7 +17,7 @@
 #
 define salt::repo (
   String $salt_release = $title,
-  String $release = undef,
+  String $release = '',
   Optional[String] $repo_url = undef,
   Optional[String] $base_repo_url = undef,
 ) {
@@ -26,7 +26,7 @@ define salt::repo (
     $base_repo_url = 'http://repo.saltstack.com'
   }
   if $facts['os']['family'] != 'Windows' {
-    if !$release {
+    if $release == '' {
       $release = $facts['os']['distro']['codename']
     }
   }
