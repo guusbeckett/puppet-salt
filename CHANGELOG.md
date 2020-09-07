@@ -4,6 +4,12 @@
 
 #### Fixes
 
+## 3.0.5 (September 07, 2020)
+
+#### Fixes
+
+* Surround values in data/os/windows.yaml with quotation marks
+
 ## 3.0.2/3.0.3/3.0.4 (September 07, 2020)
 
 #### Fixes
