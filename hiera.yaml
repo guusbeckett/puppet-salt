@@ -5,5 +5,7 @@ defaults:
   data_hash: yaml_data
 hierarchy:
 
+  - name: 'Per-OS defaults'
+    path: "os/%{facts.os.family}.yaml"
   - name: 'common'
     path: 'common.yaml'

@@ -140,6 +140,6 @@ See [REFERENCE.md](REFERENCE.md)
 
 ## Limitations
 
-Currently this module only works for distros using **apt** as package manager.
+Currently this module only works for Windows and distros using **apt** as package manager.
 
 If you want to use this module with any other package manager or any other distro, patch the repo.pp and open a pull request on GitHub.

@@ -32,7 +32,6 @@ salt::minion::additional_packages: ~
 salt::minion::service_enable: true
 salt::minion::service_ensure: running
 salt::minion::service_name: salt-minion
-salt::minion::config_dir: /etc/salt
 salt::minion::config_file: "%{lookup('salt::minion::config_dir')}/minion"
 salt::minion::configs: ~
 
@@ -45,7 +44,6 @@ salt::master::additional_packages: ~
 salt::master::service_enable: true
 salt::master::service_ensure: running
 salt::master::service_name: salt-master
-salt::master::config_dir: /etc/salt
 salt::master::config_file: "%{lookup('salt::master::config_dir')}/master"
 salt::master::configs: ~
 
@@ -59,7 +57,6 @@ salt::api::additional_packages:
 salt::api::service_enable: true
 salt::api::service_ensure: running
 salt::api::service_name: salt-api
-salt::api::config_dir: /etc/salt
 salt::api::config_file: "%{lookup('salt::api::config_dir')}/master"
 salt::api::configs: ~
 
@@ -72,7 +69,6 @@ salt::syndic::additional_packages: ~
 salt::syndic::service_enable: true
 salt::syndic::service_ensure: running
 salt::syndic::service_name: salt-syndic
-salt::syndic::config_dir: /etc/salt
 salt::syndic::config_file: "%{lookup('salt::syndic::config_dir')}/master"
 salt::syndic::configs: ~
 
@@ -81,7 +77,6 @@ salt::pepper::package_name: salt-pepper
 salt::pepper::package_ensure: 'latest'
 salt::pepper::package_provider: pip3
 salt::pepper::additional_packages: ~
-salt::pepper::config_dir: /etc/salt
 salt::pepper::config_file: "%{lookup('salt::pepper::config_dir')}/.pepperrc"
 salt::pepper::configs: ~
 salt::pepper::environment_dir: /etc/profile.d

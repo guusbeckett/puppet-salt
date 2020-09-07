@@ -4,6 +4,15 @@
 
 #### Fixes
 
+## 3.0.0 (September 07, 2020)
+
+#### Features
+
+* added Windows support
+* added Per-OS data files
+* reintroduced parameter `salt::repo::base_repo_url`
+* introduced variables `salt::minion::base_repo_url` `salt::master::base_repo_url` `salt::syndic::base_repo_url` `salt::api::base_repo_url` to enable users to configure `base_repo_url` in Foreman and other ENC
+
 
 ## 2.0.0 (May 06, 2020)
 

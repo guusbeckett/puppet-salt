@@ -12,11 +12,19 @@
 # @param repo_url
 #   Optional full repo URL to use to download the packages.
 #
+# @param base_repo_url
+#   Optional base Repo URL from which to use to download the packages.
+#
 define salt::repo (
   String $salt_release = $title,
   String $release = $facts['os']['distro']['codename'],
   Optional[String] $repo_url = undef,
+  Optional[String] $base_repo_url = undef,
 ) {
+
+  if !$base_repo_url {
+    $base_repo_url = 'http://repo.saltstack.com'
+  }
 
   case $facts['os']['family'] {
     'Debian': {
@@ -26,9 +34,9 @@ define salt::repo (
         $_url = $repo_url
       } else {
         if $salt_release == 'latest' {
-          $_url = "http://repo.saltstack.com/py3/${facts['os']['name'].downcase}/${facts['os']['distro']['release']['major']}/${facts['os']['architecture']}/latest"
+          $_url = "${base_repo_url}/py3/${facts['os']['name'].downcase}/${facts['os']['distro']['release']['major']}/${facts['os']['architecture']}/latest"
         } else {
-          $_url = "http://repo.saltstack.com/py3/${facts['os']['name'].downcase}/${facts['os']['distro']['release']['major']}/${facts['os']['architecture']}/archive/${salt_release}"
+          $_url = "${base_repo_url}/py3/${facts['os']['name'].downcase}/${facts['os']['distro']['release']['major']}/${facts['os']['architecture']}/archive/${salt_release}"
         }
       }
 
@@ -45,6 +53,21 @@ define salt::repo (
           'deb' => true,
           'src' => false,
         },
+      }
+    }
+
+    'Windows': {
+      if $repo_url {
+        $_url = "${repo_url}/Salt-Minion-${salt_release}-Py3-${facts['os']['architecture']}-Setup.exe"
+      }
+      else {
+        $_url = "${base_repo_url}/windows/Salt-Minion-${salt_release}-Py3-${facts['os']['architecture']}-Setup.exe"
+      }
+
+      file { "Salt-Minion-${salt_release}-Py3-${facts['os']['architecture']}-Setup.exe":
+        ensure  => "C:/temp/Salt-Minion-${salt_release}-Py3-${facts['os']['architecture']}-Setup.exe",
+        source  => $_url,
+        replace => 'no'
       }
     }
     default: {

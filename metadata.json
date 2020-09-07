@@ -1,6 +1,6 @@
 {
   "name": "joelkle-salt",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "author": "JoelKle",
   "summary": "Installs, configures, and manages the SaltStack ( salt-minion / salt-master / salt-api / salt-syndic / salt-pepper ).",
   "license": "Apache-2.0",
@@ -41,6 +41,9 @@
         "10",
         "11"
       ]
+    },
+    {
+      "operatingsystem": "Windows"
     }
   ],
   "requirements": [
@@ -58,7 +61,7 @@
     "salt-syndic",
     "salt-pepper"
   ],
-  "pdk-version": "1.17.0",
-  "template-url": "pdk-default#1.17.0",
-  "template-ref": "tags/1.17.0-0-gd3a4319"
+  "pdk-version": "1.18.1",
+  "template-url": "pdk-default#1.18.1",
+  "template-ref": "tags/1.18.1-0-g3d2e75c"
 }

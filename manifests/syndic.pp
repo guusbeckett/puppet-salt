@@ -71,6 +71,7 @@ class salt::syndic (
   Optional[Stdlib::Absolutepath] $config_dir,
   Stdlib::Absolutepath           $config_file,
   Optional[Hash]                 $configs,
+  Optional[String]               $repo_base_url,
   ){
 
   if ! defined(Class['salt::master']) {
@@ -78,7 +79,7 @@ class salt::syndic (
   }
 
   if $repo_manage {
-    ensure_resource('salt::repo', $package_release)
+    ensure_resource('salt::repo', $package_release, undef, $repo_base_url)
   }
 
   contain salt::syndic::install

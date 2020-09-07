@@ -1,0 +1,9 @@
+salt::minion::config_dir: /etc/salt
+
+salt::master::config_dir: /etc/salt
+
+salt::api::config_dir: /etc/salt
+
+salt::syndic::config_dir: /etc/salt
+
+salt::pepper::config_dir: /etc/salt

@@ -71,10 +71,11 @@ class salt::minion (
   Optional[Stdlib::Absolutepath] $config_dir,
   Stdlib::Absolutepath           $config_file,
   Optional[Hash]                 $configs,
+  Optional[String]               $repo_base_url,
   ){
 
   if $repo_manage {
-    ensure_resource('salt::repo', $package_release)
+    ensure_resource('salt::repo', $package_release, { 'repo_url' => undef, 'base_repo_url' => $repo_base_url})
   }
 
   contain salt::minion::install
