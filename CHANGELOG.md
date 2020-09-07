@@ -3,6 +3,13 @@
 #### Features
 
 #### Fixes
+
+## 3.0.2 (September 07, 2020)
+
+#### Fixes
+
+* Only set `$release` in repo if os family is not Windows
+
 ## 3.0.1 (September 07, 2020)
 
 #### Fixes
