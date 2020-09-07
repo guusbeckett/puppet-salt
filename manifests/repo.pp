@@ -21,13 +21,15 @@ define salt::repo (
   Optional[String] $repo_url = undef,
   Optional[String] $base_repo_url = undef,
 ) {
-
   if !$base_repo_url {
     $base_repo_url = 'http://repo.saltstack.com'
   }
   if $facts['os']['family'] != 'Windows' {
     if $release == '' {
-      $release = $facts['os']['distro']['codename']
+      $repo_release = $facts['os']['distro']['codename']
+    }
+    else {
+      $repo_release = $release
     }
   }
 
@@ -48,7 +50,7 @@ define salt::repo (
       apt::source { "repo_saltstack_com_${name}":
         ensure   => 'present',
         location => $_url,
-        release  => $release,
+        release  => $repo_release,
         repos    => 'main',
         key      => {
           id     => '754A1A7AE731F165D5E6D4BD0E08A149DE57BFBE',
