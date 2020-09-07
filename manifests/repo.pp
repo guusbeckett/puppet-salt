@@ -64,14 +64,19 @@ define salt::repo (
     }
 
     'Windows': {
+      if $salt_release == 'latest' {
+        $salt_release_name = 'Latest'
+      } else {
+        $salt_release_name = $salt_release
+      }
       if $repo_url {
-        $_url = "${repo_url}/Salt-Minion-${salt_release}-Py3-${facts['os']['architecture']}-Setup.exe"
+        $_url = "${repo_url}/Salt-Minion-${salt_release_name}-Py3-AMD64-Setup.exe"
       }
       else {
-        $_url = "${base_repo_url}/windows/Salt-Minion-${salt_release}-Py3-${facts['os']['architecture']}-Setup.exe"
+        $_url = "${base_repo_url}/windows/Salt-Minion-${salt_release_name}-Py3-AMD64-Setup.exe"
       }
 
-      file { "C:/temp/Salt-Minion-${salt_release}-Py3-${facts['os']['architecture']}-Setup.exe":
+      file { "C:/temp/Salt-Minion-${salt_release_name}-Py3-AMD64-Setup.exe":
         source  => $_url,
         replace => 'no'
       }

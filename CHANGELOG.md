@@ -4,6 +4,13 @@
 
 #### Fixes
 
+## 3.0.9 (September 07, 2020)
+
+#### Fixes
+
+* Fix capitalisation error in url used to fetch windows installer
+
+
 ## 3.0.8 (September 07, 2020)
 
 #### Fixes
